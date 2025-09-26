@@ -12,15 +12,6 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-
-    // Testing dependencies
-    testImplementation(kotlin("test"))
-    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-}
-
-tasks.test {
-    useJUnitPlatform()
 }
 
 kotlin {
@@ -28,25 +19,11 @@ kotlin {
 }
 
 application {
-    mainClass.set("com.taskmanager.MainKt")
+    mainClass.set("SimpleTaskAppKt")
 }
 
 tasks.jar {
     manifest {
-        attributes["Main-Class"] = "com.taskmanager.MainKt"
+        attributes["Main-Class"] = "SimpleTaskAppKt"
     }
-}
-
-// Create a fat JAR with all dependencies
-tasks.register<Jar>("fatJar") {
-    archiveClassifier.set("all")
-    from(sourceSets.main.get().output)
-    dependsOn(configurations.runtimeClasspath)
-    from({
-        configurations.runtimeClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) }
-    })
-    manifest {
-        attributes["Main-Class"] = "com.taskmanager.MainKt"
-    }
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
