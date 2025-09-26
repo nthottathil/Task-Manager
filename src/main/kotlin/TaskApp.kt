@@ -169,12 +169,12 @@ class TaskApp : JFrame("Task Manager Pro") {
             val textPanel = JPanel(GridLayout(2, 1)).apply {
                 isOpaque = false
 
-                add(JLabel("Task Manager Pro").apply {
+                add(JLabel("Task Manager").apply {
                     foreground = Color.WHITE
                     font = Font("Arial", Font.BOLD, 28)
                 })
 
-                add(JLabel("Organize • Track • Complete").apply {
+                add(JLabel("Organise • Track • Complete").apply {
                     foreground = Color(255, 255, 255, 200)
                     font = Font("Arial", Font.PLAIN, 14)
                 })
