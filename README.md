@@ -1,6 +1,6 @@
 # Task Manager APP
 
-A modern, desktop-based task management application built with Kotlin and Swing. Features a clean, intuitive interface with gradient designs, custom components, and efficient task organization capabilities.
+A modern, desktop-based task management application built with Kotlin and Swing. Features a clean, intuitive interface with gradient designs, custom components, and efficient task organisation capabilities.
 
 ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
